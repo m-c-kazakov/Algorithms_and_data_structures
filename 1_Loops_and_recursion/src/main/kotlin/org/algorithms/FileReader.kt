@@ -14,7 +14,9 @@ class FileReader {
                 .forEach {
                     this.merge(
                         it.name.replace("(.in)|(.out)".toRegex(), ""),
-                        hashMapOf(it.name to read(path + "/" + it.name))
+                        hashMapOf(it.name.let {
+                            if(it.contains("in")) "in" else "out"
+                        } to read(path + "/" + it.name))
                     ) { old, new -> old.plus(buildMap { putAll(new) }) }
                 }
         }
