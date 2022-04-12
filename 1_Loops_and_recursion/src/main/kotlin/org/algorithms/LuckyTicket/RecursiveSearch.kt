@@ -26,7 +26,6 @@ class RecursiveSearch(val n: Int) {
     suspend fun findLuckyTicket(
         index: Int = 1, ticket: Ticket = Ticket()
     ): Int {
-        // TODO Сделать хвостовую рекурсию
         return if (index > n * 2) {
             if (ticket.isEquals()) 1 else 0
         } else {
