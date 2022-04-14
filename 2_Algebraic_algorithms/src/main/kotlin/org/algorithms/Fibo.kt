@@ -15,6 +15,8 @@ import java.math.BigInteger
  *  2. Через итерацию
  *  3. Через формулу золотого сечения.
  *  4. Через возведение матрицы в степень.
+ *
+ *  Дополнительные варианты решения: https://habr.com/ru/post/261159/
  */
 
 fun iteration(n: BigInteger): BigInteger {
