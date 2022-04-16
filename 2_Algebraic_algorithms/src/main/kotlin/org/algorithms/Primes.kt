@@ -63,7 +63,6 @@ fun theSieveOfEratosthenes(n: Int): Int {
         if (!any) primitiveNumbers.add(candidate) else continue
     }
 
-//    println(primitiveNumbers)
     return primitiveNumbers.size
 
 
