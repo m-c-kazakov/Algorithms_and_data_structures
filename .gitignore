@@ -1,4 +1,7 @@
 # Project exclude paths
 /.gradle/
 /1_Loops_and_recursion/build/
+/2_Algebraic_algorithms/build/
+/utils/build/
 /build/
+/.idea/
