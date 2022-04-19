@@ -1,13 +1,14 @@
-package org.algorithms
+package org.utils
 
 import java.io.File
+import java.io.FileReader
 
-class FileReader {
-    fun read(path: String): String {
-        return this::class.java.classLoader.getResource(path).readText()
+class FileReaderUtils(private val path: String) {
+    private fun read(readPath: String): String {
+        return FileReader(readPath).readLines()[0]
     }
 
-    fun readDirectory(path: String): Map<String, Map<String, String>> {
+    fun readDirectory(): Map<String, Map<String, String>> {
         return hashMapOf<String, Map<String, String>>().apply {
             // example "/home/maxim/IdeaProjects/Algorithms_and_data_structures/1_Loops_and_recursion/src/main/resources/$path"
             File(path)
@@ -24,10 +25,10 @@ class FileReader {
     }
 }
 
-fun main() {
-    val fileReader = FileReader()
-    val readDirectory = fileReader.readDirectory("0.String")
-    println(readDirectory)
-
-
-}
+//fun main() {
+//    val fileReader = FileReader()
+//    val readDirectory = fileReader.readDirectory("0.String")
+//    println(readDirectory)
+//
+//
+//}
