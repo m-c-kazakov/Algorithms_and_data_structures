@@ -3,7 +3,7 @@ plugins {
 }
 
 
-group = "org.algorithms"
+group = "org.utils"
 version = "1.0-SNAPSHOT"
 
 repositories {
