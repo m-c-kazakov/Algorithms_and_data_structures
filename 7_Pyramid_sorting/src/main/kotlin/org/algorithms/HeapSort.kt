@@ -9,11 +9,12 @@ tailrec fun heapSort(
     index: Int = numbers.size - 1,
     size: Int = numbers.size - 1
 ): List<Long> {
-//    println("index=$index, size=$size, numbers=$numbers")
     if (size == 0) {
-//        println("SIZE == ZERO!!!!!")
+        // весь массив был отсортирован
         return numbers
     } else if (index < 0) {
+        // Найден максимальный элемент
+        // Будет положен в конец видимой части массива
         Collections.swap(numbers, 0, size)
         return heapSort(numbers, index=size-1, size=size-1)
     }
@@ -25,13 +26,7 @@ tailrec fun heapSort(
     if (leftIndex <= size && numbers[leftIndex] > numbers[index]) maxValueIndex=leftIndex
     if (rightIndex <= size && numbers[rightIndex] > numbers[index]) maxValueIndex=rightIndex
 
-
     Collections.swap(numbers, maxValueIndex, index)
-//    if (maxValueIndex != index) {
-////        println("stability!!!!!!!!!!!!!")
-//        Collections.swap(numbers, maxValueIndex, index)
-////        heapSort(numbers=numbers, index=maxValueIndex, size=size)
-//    }
 
     return heapSort(numbers=numbers, index=maxValueIndex-1, size=size)
 }
