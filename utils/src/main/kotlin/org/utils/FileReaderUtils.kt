@@ -5,7 +5,12 @@ import java.io.FileReader
 
 class FileReaderUtils(private val path: String) {
     private fun read(readPath: String): String {
-        return FileReader(readPath).readLines()[0]
+        val readLines = FileReader(readPath).readLines()
+        return if (readLines.size > 1) {
+            return readLines[1]
+        } else {
+            return readLines[0]
+        }
     }
 
     fun readDirectory(): Map<String, Map<String, String>> {
@@ -26,8 +31,8 @@ class FileReaderUtils(private val path: String) {
 }
 
 //fun main() {
-//    val fileReader = FileReader()
-//    val readDirectory = fileReader.readDirectory("0.String")
+//    val fileReader = FileReaderUtils("/home/maxim/IdeaProjects/Algorithms_and_data_structures/utils/src/main/resources/sorting-tests/0.random")
+//    val readDirectory = fileReader.readDirectory()
 //    println(readDirectory)
 //
 //
