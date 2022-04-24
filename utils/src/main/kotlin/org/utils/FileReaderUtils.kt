@@ -5,7 +5,12 @@ import java.io.FileReader
 
 class FileReaderUtils(private val path: String) {
     private fun read(readPath: String): String {
-        return FileReader(readPath).readLines()[0]
+        val readLines = FileReader(readPath).readLines()
+        return if (readLines.size > 1) {
+            return readLines[1]
+        } else {
+            return readLines[0]
+        }
     }
 
     fun readDirectory(): Map<String, Map<String, String>> {
