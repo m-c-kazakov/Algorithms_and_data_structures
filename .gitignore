@@ -1,10 +1,14 @@
 # Project exclude paths
 /.gradle/
-/1_Loops_and_recursion/build/
 /build/
-/utils/build/
 /.idea/
+/utils/build/
+/1_Loops_and_recursion/build/
+/2_Algebraic_algorithms/build/
+/4_Bit_arithmetic/build/
+/5_Basic_Data_Structures/build/
 /6_Simple_sorting/build/
 /7_Pyramid_sorting/build/
 /8_Quick_and_external_sorting/build/
-/2_Algebraic_algorithms/build/
+/9_Linear_sorting/build/
+/10_Binary_search_trees_AVL/build/
