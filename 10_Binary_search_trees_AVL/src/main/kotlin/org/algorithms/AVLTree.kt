@@ -38,7 +38,7 @@ class AVLTree(private var root: Node) {
                 false
             }
         } else if (child.key > parent.key) {
-            if (parent.rightLeaf != null) {9_Linear_sorting реализован RadixSort.kt. Посчитано время выполнения алгоритмов.
+            if (parent.rightLeaf != null) {
                 addValue(parent, parent.rightLeaf!!, child)
             } else if (abs(parent.leftLeafSize - parent.rightLeafSize) < 2) {
                 parent.rightLeaf = Node(child.key)
